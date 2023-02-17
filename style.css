@@ -1,0 +1,455 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #132743, #5585b5);
+/* font-family: Calibri; */
+/* height: 200vh; */
+}
+
+.background img{
+    width: 100%;
+    height: 100vh;
+}
+.background{
+    position: relative;
+}
+
+.overlay1{
+    background:  linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.text{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    /* top: 50%; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 15%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    color:#f70776 ;
+}
+.play{
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 2px #f70776 solid;
+    border-radius: 10px;
+    padding: 0.5% 1%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.play:hover{
+    background-color:#f70776 ;
+}
+.description{
+    margin: 1% 0px;
+}
+
+.welcome
+{
+    font-size: 3rem;
+}
+
+.game-play{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 20px 0px;
+}
+
+.game-play::after{
+    content: " ";
+    width: 400px;
+    height: 2px;
+    background-color: #f70776;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-top: 15px;
+}
+
+.card-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding: 2%;
+    row-gap: 40px;
+
+}
+
+.card{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.card::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg, rgba(247, 7, 118, 0.7), black) ;
+    position: absolute;
+    transition: 1s;
+    bottom: 50%;
+    /* transform: skew(30deg); */
+}
+
+.card::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg, rgba(247, 7, 118, 0.7), black) ;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* transform: skew(30deg); */
+    transition: 1s;
+}
+
+
+
+ /* .card:hover .card-img{
+    transform: scale(2,2);
+ } */
+
+
+ /* .card:hover .card::after{
+    transform: skew(90deg);
+ } */
+
+ .aside-section{
+    width: 20%;
+    height: 100%;
+  
+    position: fixed;
+    right: 0;
+    /* left: 0; */
+    z-index: 9999;
+    display: flex;
+    flex-direction: row-reverse;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    /* z-index: 999; */
+}
+
+.games-bar a{
+    text-decoration: none;
+    color: white;
+} 
+.games-bar{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.7);
+    /* padding-top: 10%; */
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.nav-bar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+text-align: center;
+width: 50%;
+justify-content: center;
+align-items: center;
+background-color: rgba(0,0,0, 0.7);
+position: relative;
+transition: 1s;
+
+}
+
+.nav-bar .logo-img{
+    width: 100%;
+}
+
+.nav-bar .logo-img img{
+    width: 50%;
+    margin-bottom: 5%;
+    animation: logo 1s infinite alternate;
+}
+
+@keyframes logo{
+    0%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+.item{
+    margin: 5% 0px;
+cursor: pointer;
+}
+
+.item:hover{
+    color: #f70776;
+}
+
+.item:hover .games-bar{
+    color: white;
+}
+.nav-bar:hover{
+    width: 70%;
+}
+.games:hover .games-bar{
+    opacity: 1;
+}
+
+
+.card:hover::after,.card:hover::before{
+    transform: skew(90deg);
+}
+
+
+
+
+.title {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* .line {
+    background-color: black;
+    width: 25%;
+    height: 1.5px;
+
+} */
+
+
+body {
+    background: linear-gradient(45deg, #132743, #5585b5);
+    width: 100%;
+} 
+
+.cards {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card2 img {
+    width: 100%;
+}
+
+.card2 {
+    width: 29%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: none;
+    border: 1px solid #132743;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card2 .button:hover {
+    background-color: rgba(247, 7, 118, 1);
+    border: 0px solid rgba(247, 7, 118, 1);
+}
+
+.overlay {
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.card2:hover .overlay {
+    top: 0;
+    opacity: 1;
+}
+
+.card2:hover .button {
+    opacity: 1;
+    z-index: 5;
+}
+
+form {
+    background-color: white;
+    margin: 15vh 10% 5vh 10%;
+    padding: 3vh;
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+}
+
+form h1 {
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    margin: 0 0 10px 0;
+}
+
+form input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 0 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+form textarea {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 5px 0 0 0;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+form input[type=submit] {
+    padding: 10px;
+    margin: 5px 0 0 0;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+form input[type=submit]:hover {
+    background-color: rgba(247, 7, 118, 1);
+}
+
+.FoucsHere:focus {
+    box-shadow: 0 0 20px rgba(247, 7, 118, 1);
+}
+.parent{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  
+}
+.child{
+ width: 25%;
+ position: relative;
+ overflow: hidden;
+}
+.child img{
+    width: 100%;
+    border-radius: 10px;
+}
+ .overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    position: absolute;
+    top: 100vh;
+    transition: 2s;
+    opacity: 0;
+   
+}
+.child:hover .overlay{
+ opacity: 1;
+ top: 0;
+ 
+}  
+
+.zo2{
+    align-self: flex-end;
+}
+.title h1{
+  
+    color: white;
+    font-family: monospace;
+    font-size: 40px;
+    
+}
+
+.line{
+    width: 20%;
+    height: 2px;
+    background-color: crimson;
+    
+}
+.btn {
+    color: white;
+    border: 1px solid #132743;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    transition: 1s;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.child:hover .btn {
+    opacity: 1;
+    z-index:5;
+}
+.btn:hover{
+    background-color: rgba(247, 7, 118, 1);
+    border: 0px solid rgba(247, 7, 118, 1);
+}
+
+
+
+
+
